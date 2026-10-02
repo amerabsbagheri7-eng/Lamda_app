@@ -20,7 +20,7 @@ jobs:
           sudo update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
           echo "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >> $GITHUB_ENV
       - name: Install buildozer and cython
-        run: pip install --upgrade buildozer cython virtualenv
+        run: pip install buildozer==1.5.0 cython==0.29.36 virtualenv
       - name: Pre-accept Android SDK licenses
         run: |
           mkdir -p $HOME/.buildozer/android/platform/android-sdk/cmdline-tools
